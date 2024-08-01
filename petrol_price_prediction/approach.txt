@@ -1,0 +1,33 @@
+Approach:
+=========
+1. Data Preprocessing:
+   - Loaded the train and test datasets.
+   - Converted 'Timestamp' to datetime format.
+   - Cleaned 'VAT' and 'Barrel_Price' columns by converting them to numeric types.
+   - Handled missing values by filling them with mean values.
+   
+2. Feature Engineering:
+   - Extracted year, month, day, and hour from 'Timestamp' for both train and test datasets.
+   - Dropped the original 'Timestamp' column after extraction.
+
+3. Model Training:
+   - Used RandomForestRegressor for training the model.
+   - Split the training data into training and validation sets (80% - 20% split).
+   - Trained the model on the training set and evaluated it on the validation set.
+
+4. Prediction and Submission:
+   - Predicted prices for the test set.
+   - Created a submission file with the required format ('Timestamp' and 'Price').
+
+Tools Used:
+===========
+- Python
+- pandas for data manipulation
+- scikit-learn for model building and evaluation
+
+Relevant Source Files:
+======================
+- train.csv
+- test.csv
+- submission.csv
+- source_code.py
